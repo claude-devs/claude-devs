@@ -93,13 +93,9 @@ export default function Contact() {
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-3 text-gray-400">
                   <div className="text-cyan-400">{item.icon}</div>
-                  {"href" in item ? (
-                    <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-cyan-400 transition-colors">
-                      {item.label}
-                    </a>
-                  ) : (
-                    <span className="text-sm">{item.label}</span>
-                  )}
+                  <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-cyan-400 transition-colors">
+                    {item.label}
+                  </a>
                 </div>
               ))}
             </div>
