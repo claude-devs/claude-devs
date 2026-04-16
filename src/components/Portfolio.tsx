@@ -4,28 +4,28 @@ const projects = [
     description:
       "An enterprise-grade AI customer support platform powered by Claude. Handles 10,000+ daily conversations with automatic escalation and sentiment analysis.",
     tags: ["Next.js", "Claude API", "PostgreSQL", "WebSockets"],
-    gradient: "from-orange-500 to-amber-500",
+    gradient: "from-violet-600 to-indigo-600",
   },
   {
     name: "CodePilot Pro",
     description:
       "An internal developer tool that uses Claude to review pull requests, generate documentation, and suggest code improvements in real time within GitHub.",
     tags: ["TypeScript", "GitHub Actions", "Anthropic SDK", "Node.js"],
-    gradient: "from-amber-500 to-yellow-500",
+    gradient: "from-indigo-600 to-blue-600",
   },
   {
     name: "DocuMind",
     description:
       "A document intelligence SaaS that extracts, summarises, and answers questions from PDFs and Word docs using vector search and Claude for reasoning.",
     tags: ["Python", "FastAPI", "Pinecone", "React", "Claude API"],
-    gradient: "from-orange-600 to-red-500",
+    gradient: "from-purple-600 to-violet-600",
   },
   {
     name: "ShopFlow AI",
     description:
       "A full-stack e-commerce platform with AI-powered product recommendations, automated SEO copy generation, and a personalised shopping assistant.",
     tags: ["Next.js", "Prisma", "Stripe", "OpenSearch", "Tailwind"],
-    gradient: "from-amber-400 to-orange-500",
+    gradient: "from-fuchsia-600 to-purple-600",
   },
 ];
 
@@ -35,18 +35,18 @@ export default function Portfolio() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <p className="text-orange-400 text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-violet-400 text-sm font-semibold uppercase tracking-widest mb-3">
             Our Work
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
             Projects We&apos;re{" "}
-            <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
               Proud Of
             </span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            A selection of recent work showcasing how we combine AI capabilities
-            with solid engineering to create real business value.
+            Every project below has Claude at its core — not as a gimmick, but as the
+            engine driving real business outcomes.
           </p>
         </div>
 
@@ -55,7 +55,7 @@ export default function Portfolio() {
           {projects.map((project) => (
             <div
               key={project.name}
-              className="group relative bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden hover:border-orange-700/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-orange-900/20"
+              className="group relative bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden hover:border-violet-700/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-violet-900/20"
             >
               {/* Top gradient bar */}
               <div className={`h-1.5 w-full bg-gradient-to-r ${project.gradient}`} />
@@ -80,7 +80,11 @@ export default function Portfolio() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="bg-gray-800 border border-gray-700 text-gray-300 text-xs font-medium px-3 py-1 rounded-full"
+                      className={`text-xs font-medium px-3 py-1 rounded-full border ${
+                        tag.includes("Claude") || tag.includes("Anthropic")
+                          ? "bg-violet-950/60 border-violet-700/50 text-violet-300"
+                          : "bg-gray-800 border-gray-700 text-gray-300"
+                      }`}
                     >
                       {tag}
                     </span>
@@ -95,9 +99,9 @@ export default function Portfolio() {
         <div className="text-center mt-12">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 font-medium transition-colors group"
+            className="inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 font-medium transition-colors group"
           >
-            Interested in working together?
+            Want us to build something like this for you?
             <svg
               viewBox="0 0 24 24"
               fill="none"
