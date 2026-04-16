@@ -68,12 +68,12 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <p className="text-violet-400 text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-cyan-400 text-sm font-semibold uppercase tracking-widest mb-3">
             What We Do
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
             Services Supercharged{" "}
-            <span className="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent">
               by Claude AI
             </span>
           </h2>
@@ -90,22 +90,22 @@ export default function Services() {
               key={service.title}
               className={`group border rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
                 service.highlight
-                  ? "bg-violet-950/40 border-violet-700/60 hover:border-violet-500 hover:shadow-violet-900/30"
-                  : "bg-gray-950 border-gray-800 hover:border-violet-700/60 hover:bg-gray-900 hover:shadow-violet-900/20"
+                  ? "bg-cyan-950/40 border-cyan-600/60 hover:border-cyan-400 hover:shadow-cyan-950/30"
+                  : "bg-gray-950 border-gray-800 hover:border-cyan-600/60 hover:bg-gray-900 hover:shadow-cyan-950/20"
               }`}
             >
               {/* Icon */}
               <div className={`w-12 h-12 rounded-xl border flex items-center justify-center mb-5 transition-colors ${
                 service.highlight
-                  ? "bg-violet-900/60 border-violet-600/50 text-violet-300"
-                  : "bg-violet-950 border-violet-800/50 text-violet-400 group-hover:bg-violet-900/60"
+                  ? "bg-cyan-950/60 border-cyan-500/50 text-cyan-300"
+                  : "bg-cyan-950 border-cyan-700/50 text-cyan-400 group-hover:bg-cyan-950/60"
               }`}>
                 {service.icon}
               </div>
               <div className="flex items-center gap-2 mb-2">
                 <h3 className="text-white font-semibold text-lg">{service.title}</h3>
                 {service.highlight && (
-                  <span className="text-[10px] font-semibold bg-violet-600/30 border border-violet-500/40 text-violet-300 px-2 py-0.5 rounded-full">
+                  <span className="text-[10px] font-semibold bg-cyan-500/30 border border-cyan-400/40 text-cyan-300 px-2 py-0.5 rounded-full">
                     Core
                   </span>
                 )}
@@ -118,9 +118,9 @@ export default function Services() {
         </div>
 
         {/* Claude CTA banner */}
-        <div className="mt-14 rounded-2xl bg-violet-950/30 border border-violet-800/40 p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="mt-14 rounded-2xl bg-cyan-950/30 border border-cyan-700/40 p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-start gap-4">
-            <div className="w-10 h-10 rounded-xl bg-violet-600 flex items-center justify-center shrink-0">
+            <div className="w-10 h-10 rounded-xl bg-cyan-500 flex items-center justify-center shrink-0">
               <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5 text-white" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
               </svg>
@@ -132,7 +132,7 @@ export default function Services() {
           </div>
           <a
             href="#contact"
-            className="shrink-0 bg-violet-600 hover:bg-violet-500 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-violet-900/40 hover:-translate-y-0.5 whitespace-nowrap"
+            className="shrink-0 bg-cyan-500 hover:bg-cyan-400 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-950/40 hover:-translate-y-0.5 whitespace-nowrap"
           >
             Get a Free Consultation
           </a>

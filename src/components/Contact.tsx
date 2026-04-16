@@ -29,12 +29,12 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: copy */}
           <div>
-            <p className="text-violet-400 text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="text-cyan-400 text-sm font-semibold uppercase tracking-widest mb-3">
               Get In Touch
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               Let&apos;s Build Your Next{" "}
-              <span className="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent">
                 Claude AI Product
               </span>
             </h2>
@@ -52,7 +52,7 @@ export default function Contact() {
                 "Free initial consultation, no strings attached",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-gray-400 text-sm">
-                  <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5 text-violet-400 shrink-0 mt-0.5" stroke="currentColor" strokeWidth={2}>
+                  <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
                   {item}
@@ -70,14 +70,16 @@ export default function Contact() {
                     </svg>
                   ),
                   label: "hello@claude-devs.com",
+                  href: "mailto:hello@claude-devs.com",
                 },
                 {
                   icon: (
                     <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                     </svg>
                   ),
-                  label: "claude-devs.com",
+                  label: "+34 634 839 752",
+                  href: "tel:+34634839752",
                 },
                 {
                   icon: (
@@ -90,9 +92,9 @@ export default function Contact() {
                 },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-3 text-gray-400">
-                  <div className="text-violet-400">{item.icon}</div>
+                  <div className="text-cyan-400">{item.icon}</div>
                   {"href" in item ? (
-                    <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-violet-400 transition-colors">
+                    <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-cyan-400 transition-colors">
                       {item.label}
                     </a>
                   ) : (
@@ -107,8 +109,8 @@ export default function Contact() {
           <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8">
             {status === "success" ? (
               <div className="text-center py-12">
-                <div className="w-16 h-16 rounded-full bg-violet-950 border border-violet-700 flex items-center justify-center mx-auto mb-4">
-                  <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8 text-violet-400" stroke="currentColor" strokeWidth={2}>
+                <div className="w-16 h-16 rounded-full bg-cyan-950 border border-cyan-600 flex items-center justify-center mx-auto mb-4">
+                  <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8 text-cyan-400" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
                 </div>
@@ -125,7 +127,7 @@ export default function Contact() {
                     type="text" id="name" name="name" required
                     value={formData.name} onChange={handleChange}
                     placeholder="Your full name"
-                    className="w-full bg-gray-950 border border-gray-700 text-white placeholder-gray-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500/50 transition-colors"
+                    className="w-full bg-gray-950 border border-gray-700 text-white placeholder-gray-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/50 transition-colors"
                   />
                 </div>
                 <div>
@@ -134,7 +136,7 @@ export default function Contact() {
                     type="email" id="email" name="email" required
                     value={formData.email} onChange={handleChange}
                     placeholder="you@example.com"
-                    className="w-full bg-gray-950 border border-gray-700 text-white placeholder-gray-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500/50 transition-colors"
+                    className="w-full bg-gray-950 border border-gray-700 text-white placeholder-gray-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/50 transition-colors"
                   />
                 </div>
                 <div>
@@ -143,7 +145,7 @@ export default function Contact() {
                     id="message" name="message" required rows={5}
                     value={formData.message} onChange={handleChange}
                     placeholder="Tell us about your project — what you're building and how Claude fits in..."
-                    className="w-full bg-gray-950 border border-gray-700 text-white placeholder-gray-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500/50 transition-colors resize-none"
+                    className="w-full bg-gray-950 border border-gray-700 text-white placeholder-gray-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/50 transition-colors resize-none"
                   />
                 </div>
 
@@ -154,7 +156,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="w-full bg-violet-600 hover:bg-violet-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-violet-900/40 active:scale-[0.98]"
+                  className="w-full bg-cyan-500 hover:bg-cyan-400 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-950/40 active:scale-[0.98]"
                 >
                   {status === "loading" ? "Sending…" : "Send Message — We Reply in 24h"}
                 </button>
