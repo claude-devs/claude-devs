@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(volta list *)",
+      "Bash(volta install *)",
+      "Bash(volta run *)",
+      "Bash(~/.volta/tools/image/node/20*/bin/node --version)",
+      "Read(//Users/alexgashkov/.volta/tools/image/node/**)",
+      "Bash(~/.volta/tools/image/node/20.20.2/bin/npx --version)",
+      "Bash(~/.volta/tools/image/node/20.20.2/bin/npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npx tsc *)",
+      "Bash(npm run *)",
+      "Bash(vercel --version)",
+      "Bash(npm install *)",
+      "Bash(vercel login *)"
+    ]
+  }
+}
