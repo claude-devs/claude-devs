@@ -2,6 +2,7 @@ const footerLinks = [
   { label: "Home", href: "#hero" },
   { label: "Services", href: "#services" },
   { label: "Portfolio", href: "#portfolio" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -13,8 +14,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
-          <a href="#hero" className="flex items-center gap-2 group">
-            <div className="w-7 h-7 rounded-md bg-violet-600 flex items-center justify-center">
+          <a href="#hero" className="flex items-center gap-2.5 group">
+            <div className="w-7 h-7 rounded-md bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center shadow-md shadow-orange-900/30">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -29,8 +30,9 @@ export default function Footer() {
                 />
               </svg>
             </div>
-            <span className="text-white font-semibold group-hover:text-violet-400 transition-colors text-sm">
-              Claude-devs
+            <span className="font-bold text-sm tracking-tight">
+              <span className="text-white font-mono">Claude</span>
+              <span className="font-mono bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent"> Devs</span>
             </span>
           </a>
 
@@ -49,7 +51,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-gray-600 text-sm text-center md:text-right">
-            &copy; {year} Claude-devs. All rights reserved.
+            &copy; {year} Claude Devs. All rights reserved.
           </p>
         </div>
       </div>

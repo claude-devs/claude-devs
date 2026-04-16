@@ -18,22 +18,21 @@ export default function Contact() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    // In production this would send to an API route
     setSubmitted(true);
   };
 
   return (
-    <section id="contact" className="bg-gray-900 py-24 sm:py-32">
+    <section id="contact" className="bg-gray-950 py-24 sm:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: copy */}
           <div>
-            <p className="text-violet-400 text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="text-orange-400 text-sm font-semibold uppercase tracking-widest mb-3">
               Get In Touch
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               Let&apos;s Build Something{" "}
-              <span className="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
                 Amazing
               </span>
             </h2>
@@ -63,7 +62,7 @@ export default function Contact() {
                 },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-3 text-gray-400">
-                  <div className="text-violet-400">{item.icon}</div>
+                  <div className="text-orange-400">{item.icon}</div>
                   <span className="text-sm">{item.label}</span>
                 </div>
               ))}
@@ -71,11 +70,11 @@ export default function Contact() {
           </div>
 
           {/* Right: form */}
-          <div className="bg-gray-950 border border-gray-800 rounded-2xl p-6 sm:p-8">
+          <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8">
             {submitted ? (
               <div className="text-center py-12">
-                <div className="w-16 h-16 rounded-full bg-violet-950 border border-violet-700 flex items-center justify-center mx-auto mb-4">
-                  <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8 text-violet-400" stroke="currentColor" strokeWidth={2}>
+                <div className="w-16 h-16 rounded-full bg-orange-950 border border-orange-700 flex items-center justify-center mx-auto mb-4">
+                  <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8 text-orange-400" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
                 </div>
@@ -87,10 +86,7 @@ export default function Contact() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-gray-300 mb-2"
-                  >
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                     Name
                   </label>
                   <input
@@ -101,15 +97,12 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Your full name"
-                    className="w-full bg-gray-900 border border-gray-700 text-white placeholder-gray-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500/50 transition-colors"
+                    className="w-full bg-gray-950 border border-gray-700 text-white placeholder-gray-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500/50 transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-300 mb-2"
-                  >
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                     Email
                   </label>
                   <input
@@ -120,15 +113,12 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="you@example.com"
-                    className="w-full bg-gray-900 border border-gray-700 text-white placeholder-gray-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500/50 transition-colors"
+                    className="w-full bg-gray-950 border border-gray-700 text-white placeholder-gray-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500/50 transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-300 mb-2"
-                  >
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                     Message
                   </label>
                   <textarea
@@ -139,13 +129,13 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell us about your project..."
-                    className="w-full bg-gray-900 border border-gray-700 text-white placeholder-gray-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500/50 transition-colors resize-none"
+                    className="w-full bg-gray-950 border border-gray-700 text-white placeholder-gray-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500/50 transition-colors resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-violet-600 hover:bg-violet-500 text-white font-semibold py-3 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-violet-900/40 active:scale-[0.98]"
+                  className="w-full bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-white font-semibold py-3 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-orange-900/40 active:scale-[0.98]"
                 >
                   Send Message
                 </button>

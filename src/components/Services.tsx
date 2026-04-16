@@ -67,12 +67,12 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <p className="text-violet-400 text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-orange-400 text-sm font-semibold uppercase tracking-widest mb-3">
             What We Do
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
             Services Built for the{" "}
-            <span className="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
               AI Era
             </span>
           </h2>
@@ -87,10 +87,10 @@ export default function Services() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="group bg-gray-950 border border-gray-800 rounded-2xl p-6 hover:border-violet-700/60 hover:bg-gray-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-900/20"
+              className="group bg-gray-950 border border-gray-800 rounded-2xl p-6 hover:border-orange-700/60 hover:bg-gray-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-900/20"
             >
               {/* Icon */}
-              <div className="w-12 h-12 rounded-xl bg-violet-950 border border-violet-800/50 flex items-center justify-center text-violet-400 mb-5 group-hover:bg-violet-900/60 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-orange-950/60 border border-orange-800/50 flex items-center justify-center text-orange-400 mb-5 group-hover:bg-orange-900/40 transition-colors">
                 {service.icon}
               </div>
               <h3 className="text-white font-semibold text-lg mb-2">
