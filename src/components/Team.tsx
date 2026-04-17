@@ -74,8 +74,30 @@ export default function Team() {
             {/* Left: identity */}
             <div className="flex flex-col items-start gap-4">
               {/* Avatar */}
-              <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-cyan-500 to-sky-600 flex items-center justify-center text-white text-2xl font-bold font-mono shadow-lg shadow-cyan-950/40">
-                OH
+              <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-cyan-500 to-sky-600 flex items-center justify-center shadow-lg shadow-cyan-950/40 overflow-hidden">
+                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                  {/* Shoulders */}
+                  <path d="M8,80 L10,67 C12,59 21,55 30,53 L40,57 L50,53 C59,55 68,59 70,67 L72,80 Z" fill="white" fillOpacity="0.12" />
+                  {/* Head */}
+                  <ellipse cx="40" cy="50" rx="18" ry="20" fill="white" fillOpacity="0.88" />
+                  {/* Beard */}
+                  <path d="M24,57 Q22,64 25,69 Q32,76 40,76 Q48,76 55,69 Q58,64 56,57 L51,59 Q45,63 40,63 Q35,63 29,59 Z" fill="white" fillOpacity="0.72" />
+                  {/* Cap dome */}
+                  <path d="M23,39 C23,21 57,21 57,39 L57,43 L23,43 Z" fill="white" fillOpacity="0.95" />
+                  {/* Cap brim */}
+                  <path d="M17,41 L63,41 L61,47 L19,47 Z" fill="white" fillOpacity="0.88" />
+                  {/* Cap top button */}
+                  <circle cx="40" cy="22" r="2" fill="white" fillOpacity="0.5" />
+                  {/* Eyes */}
+                  <circle cx="34" cy="52" r="2.5" fill="#0891b2" />
+                  <circle cx="46" cy="52" r="2.5" fill="#0891b2" />
+                  {/* Glasses */}
+                  <rect x="27.5" y="47.5" width="12" height="9" rx="4" stroke="#0891b2" strokeOpacity="0.4" strokeWidth="1.5" fill="none" />
+                  <rect x="40.5" y="47.5" width="12" height="9" rx="4" stroke="#0891b2" strokeOpacity="0.4" strokeWidth="1.5" fill="none" />
+                  <line x1="39.5" y1="52" x2="40.5" y2="52" stroke="#0891b2" strokeOpacity="0.4" strokeWidth="1.5" />
+                  {/* Mustache */}
+                  <path d="M34,61 C36,63 38,63 40,61 C42,63 44,63 46,61" stroke="white" strokeOpacity="0.55" strokeWidth="2" fill="none" strokeLinecap="round" />
+                </svg>
               </div>
               <div>
                 <h3 className="text-white text-xl font-bold mb-0.5">Oleksii Hashkov</h3>
