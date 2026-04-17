@@ -48,33 +48,32 @@ const teamStrengths = [
 
 export default function Team() {
   return (
-    <section id="team" className="bg-gray-950 py-24 sm:py-32">
+    <section id="team" className="bg-white dark:bg-gray-950 py-24 sm:py-32 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <p className="text-cyan-400 text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-cyan-600 dark:text-cyan-400 text-sm font-semibold uppercase tracking-widest mb-3">
             Who We Are
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             People Behind{" "}
-            <span className="bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-500 to-sky-500 dark:from-cyan-400 dark:to-sky-400 bg-clip-text text-transparent">
               Claude Devs
             </span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
             A tight-knit team of senior engineers led by a founder who has built,
             shipped, and scaled products for a decade.
           </p>
         </div>
 
         {/* Founder card */}
-        <div className="mb-10 bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden hover:border-cyan-700/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-950/20">
+        <div className="mb-10 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden hover:border-cyan-300 dark:hover:border-cyan-700/50 transition-all duration-300 hover:shadow-2xl hover:shadow-gray-100 dark:hover:shadow-cyan-950/20">
           <div className="h-1.5 w-full bg-gradient-to-r from-cyan-500 to-sky-500" />
           <div className="p-8 sm:p-10 grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
             {/* Left: identity */}
             <div className="flex flex-col items-start gap-4">
-              {/* Avatar */}
-              <div className="w-20 h-20 rounded-2xl shadow-lg shadow-cyan-950/40 overflow-hidden">
+              <div className="w-20 h-20 rounded-2xl shadow-lg shadow-cyan-500/10 overflow-hidden">
                 <img
                   src="/VBXbAtFIesk.jpg"
                   alt="Oleksii Hashkov"
@@ -82,16 +81,15 @@ export default function Team() {
                 />
               </div>
               <div>
-                <h3 className="text-white text-xl font-bold mb-0.5">Oleksii Hashkov</h3>
-                <p className="text-cyan-400 text-sm font-medium">Founder & CEO</p>
-                <p className="text-gray-500 text-sm mt-1">Engineer · Builder · Strategist</p>
+                <h3 className="text-gray-900 dark:text-white text-xl font-bold mb-0.5">Oleksii Hashkov</h3>
+                <p className="text-cyan-600 dark:text-cyan-400 text-sm font-medium">Founder & CEO</p>
+                <p className="text-gray-500 dark:text-gray-500 text-sm mt-1">Engineer · Builder · Strategist</p>
               </div>
-              {/* Tags */}
               <div className="flex flex-wrap gap-2">
                 {["10+ yrs exp", "Product", "Architecture", "Founder"].map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs font-medium bg-cyan-950/60 border border-cyan-700/40 text-cyan-300 px-3 py-1 rounded-full"
+                    className="text-xs font-medium bg-cyan-50 dark:bg-cyan-950/60 border border-cyan-200 dark:border-cyan-700/40 text-cyan-600 dark:text-cyan-300 px-3 py-1 rounded-full"
                   >
                     {tag}
                   </span>
@@ -101,7 +99,7 @@ export default function Team() {
 
             {/* Right: bio + achievements */}
             <div className="lg:col-span-2">
-              <p className="text-gray-300 text-base leading-relaxed mb-6">
+              <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed mb-6">
                 Oleksii is the kind of founder who writes code in the morning and closes
                 deals in the afternoon. With over a decade of experience across engineering,
                 product management, and business development, he built Claude Devs to bridge
@@ -109,11 +107,11 @@ export default function Team() {
               </p>
               <ul className="space-y-2.5">
                 {founderAchievements.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-gray-400 text-sm">
+                  <li key={item} className="flex items-start gap-3 text-gray-600 dark:text-gray-400 text-sm">
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
-                      className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"
+                      className="w-4 h-4 text-cyan-500 dark:text-cyan-400 shrink-0 mt-0.5"
                       stroke="currentColor"
                       strokeWidth={2.5}
                     >
@@ -129,22 +127,22 @@ export default function Team() {
 
         {/* Team strengths grid */}
         <div className="mb-8">
-          <h3 className="text-white text-xl font-bold mb-6 text-center">
+          <h3 className="text-gray-900 dark:text-white text-xl font-bold mb-6 text-center">
             The Engineering Team
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {teamStrengths.map((item) => (
               <div
                 key={item.title}
-                className="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-cyan-700/50 hover:-translate-y-0.5 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-950/20"
+                className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 hover:border-cyan-300 dark:hover:border-cyan-700/50 hover:-translate-y-0.5 transition-all duration-300 hover:shadow-xl hover:shadow-gray-100 dark:hover:shadow-cyan-950/20"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-9 h-9 rounded-lg bg-cyan-950/60 border border-cyan-700/40 flex items-center justify-center text-cyan-400 shrink-0">
+                  <div className="w-9 h-9 rounded-lg bg-cyan-50 dark:bg-cyan-950/60 border border-cyan-200 dark:border-cyan-700/40 flex items-center justify-center text-cyan-600 dark:text-cyan-400 shrink-0">
                     {item.icon}
                   </div>
-                  <h4 className="text-white font-semibold">{item.title}</h4>
+                  <h4 className="text-gray-900 dark:text-white font-semibold">{item.title}</h4>
                 </div>
-                <p className="text-gray-400 text-sm leading-relaxed">{item.body}</p>
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{item.body}</p>
               </div>
             ))}
           </div>
@@ -154,7 +152,7 @@ export default function Team() {
         <div className="text-center mt-12">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-cyan-950/40 hover:shadow-cyan-700/50 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:-translate-y-0.5"
           >
             Work With Us
             <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4" stroke="currentColor" strokeWidth={2}>

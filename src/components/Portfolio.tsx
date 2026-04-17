@@ -31,20 +31,20 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="bg-gray-950 py-24 sm:py-32">
+    <section id="portfolio" className="bg-white dark:bg-gray-950 py-24 sm:py-32 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <p className="text-cyan-400 text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-cyan-600 dark:text-cyan-400 text-sm font-semibold uppercase tracking-widest mb-3">
             Our Work
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Projects We&apos;re{" "}
-            <span className="bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-500 to-sky-500 dark:from-cyan-400 dark:to-sky-400 bg-clip-text text-transparent">
               Proud Of
             </span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
             Every project below has Claude at its core — not as a gimmick, but as the
             engine driving real business outcomes.
           </p>
@@ -55,7 +55,7 @@ export default function Portfolio() {
           {projects.map((project) => (
             <div
               key={project.name}
-              className="group relative bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden hover:border-cyan-600/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-950/20"
+              className="group relative bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden hover:border-cyan-300 dark:hover:border-cyan-600/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-gray-200/50 dark:hover:shadow-cyan-950/20"
             >
               {/* Top gradient bar */}
               <div className={`h-1.5 w-full bg-gradient-to-r ${project.gradient}`} />
@@ -68,10 +68,10 @@ export default function Portfolio() {
                   {project.name[0]}
                 </div>
 
-                <h3 className="text-white font-bold text-xl mb-2">
+                <h3 className="text-gray-900 dark:text-white font-bold text-xl mb-2">
                   {project.name}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-5">
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-5">
                   {project.description}
                 </p>
 
@@ -82,8 +82,8 @@ export default function Portfolio() {
                       key={tag}
                       className={`text-xs font-medium px-3 py-1 rounded-full border ${
                         tag.includes("Claude") || tag.includes("Anthropic")
-                          ? "bg-cyan-950/60 border-cyan-600/50 text-cyan-300"
-                          : "bg-gray-800 border-gray-700 text-gray-300"
+                          ? "bg-cyan-50 dark:bg-cyan-950/60 border-cyan-300 dark:border-cyan-600/50 text-cyan-600 dark:text-cyan-300"
+                          : "bg-gray-100 dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300"
                       }`}
                     >
                       {tag}
@@ -99,7 +99,7 @@ export default function Portfolio() {
         <div className="text-center mt-12">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition-colors group"
+            className="inline-flex items-center gap-2 text-cyan-600 dark:text-cyan-400 hover:text-cyan-500 dark:hover:text-cyan-300 font-medium transition-colors group"
           >
             Want us to build something like this for you?
             <svg

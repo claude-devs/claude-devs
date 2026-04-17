@@ -74,20 +74,20 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="bg-gray-900 py-24 sm:py-32">
+    <section id="services" className="bg-gray-50 dark:bg-gray-900 py-24 sm:py-32 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <p className="text-cyan-400 text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-cyan-600 dark:text-cyan-400 text-sm font-semibold uppercase tracking-widest mb-3">
             What We Solve
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             How We Help You{" "}
-            <span className="bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-500 to-sky-500 dark:from-cyan-400 dark:to-sky-400 bg-clip-text text-transparent">
               Win with Claude AI
             </span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
             We don&apos;t list technologies — we solve business problems. Every engagement is built on deep Anthropic expertise and production-tested AI architecture.
           </p>
         </div>
@@ -99,33 +99,33 @@ export default function Services() {
               key={service.title}
               className={`group relative border rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
                 service.featured
-                  ? "bg-gradient-to-br from-cyan-950/60 to-sky-950/40 border-cyan-500/70 hover:border-cyan-400 hover:shadow-cyan-950/40 ring-1 ring-cyan-500/20"
+                  ? "bg-gradient-to-br from-cyan-50 to-sky-50 dark:from-cyan-950/60 dark:to-sky-950/40 border-cyan-300 dark:border-cyan-500/70 hover:border-cyan-400 hover:shadow-cyan-100 dark:hover:shadow-cyan-950/40 ring-1 ring-cyan-200 dark:ring-cyan-500/20"
                   : service.badgeStyle === "flagship"
-                  ? "bg-gray-950/80 border-sky-700/50 hover:border-sky-500/70 hover:bg-gray-900 hover:shadow-sky-950/20"
-                  : "bg-gray-950 border-gray-800 hover:border-cyan-600/60 hover:bg-gray-900 hover:shadow-cyan-950/20"
+                  ? "bg-white dark:bg-gray-950/80 border-sky-200 dark:border-sky-700/50 hover:border-sky-400 dark:hover:border-sky-500/70 hover:bg-sky-50 dark:hover:bg-gray-900 hover:shadow-sky-100 dark:hover:shadow-sky-950/20"
+                  : "bg-white dark:bg-gray-950 border-gray-200 dark:border-gray-800 hover:border-cyan-300 dark:hover:border-cyan-600/60 hover:bg-gray-50 dark:hover:bg-gray-900 hover:shadow-gray-100 dark:hover:shadow-cyan-950/20"
               }`}
             >
               {/* Icon */}
               <div className={`w-12 h-12 rounded-xl border flex items-center justify-center mb-5 transition-colors ${
                 service.featured
-                  ? "bg-cyan-500/20 border-cyan-400/50 text-cyan-300"
+                  ? "bg-cyan-100 dark:bg-cyan-500/20 border-cyan-300 dark:border-cyan-400/50 text-cyan-600 dark:text-cyan-300"
                   : service.badgeStyle === "flagship"
-                  ? "bg-sky-950/60 border-sky-600/50 text-sky-300"
-                  : "bg-cyan-950 border-cyan-700/50 text-cyan-400 group-hover:bg-cyan-950/60"
+                  ? "bg-sky-50 dark:bg-sky-950/60 border-sky-200 dark:border-sky-600/50 text-sky-600 dark:text-sky-300"
+                  : "bg-cyan-50 dark:bg-cyan-950 border-cyan-200 dark:border-cyan-700/50 text-cyan-600 dark:text-cyan-400"
               }`}>
                 {service.icon}
               </div>
 
               {/* Title + badge */}
               <div className="flex items-center gap-2 mb-1.5 flex-wrap">
-                <h3 className="text-white font-semibold text-lg">{service.title}</h3>
+                <h3 className="text-gray-900 dark:text-white font-semibold text-lg">{service.title}</h3>
                 {service.badge && (
                   <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${
                     service.badgeStyle === "flagship"
-                      ? "bg-sky-500/20 border-sky-400/40 text-sky-300"
+                      ? "bg-sky-100 dark:bg-sky-500/20 border-sky-300 dark:border-sky-400/40 text-sky-600 dark:text-sky-300"
                       : service.badgeStyle === "hot"
-                      ? "bg-orange-500/20 border-orange-400/40 text-orange-300"
-                      : "bg-cyan-500/20 border-cyan-400/40 text-cyan-300"
+                      ? "bg-orange-100 dark:bg-orange-500/20 border-orange-300 dark:border-orange-400/40 text-orange-600 dark:text-orange-300"
+                      : "bg-cyan-100 dark:bg-cyan-500/20 border-cyan-300 dark:border-cyan-400/40 text-cyan-600 dark:text-cyan-300"
                   }`}>
                     {service.badge}
                   </span>
@@ -134,13 +134,13 @@ export default function Services() {
 
               {/* Headline */}
               <p className={`text-sm font-medium mb-2 ${
-                service.featured ? "text-cyan-300" : "text-cyan-400/80"
+                service.featured ? "text-cyan-600 dark:text-cyan-300" : "text-cyan-600 dark:text-cyan-400/80"
               }`}>
                 {service.headline}
               </p>
 
               {/* Description */}
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                 {service.description}
               </p>
             </div>
@@ -148,8 +148,8 @@ export default function Services() {
         </div>
 
         {/* Included-in-everything strip */}
-        <div className="mt-10 rounded-2xl bg-gray-950/60 border border-gray-700/50 px-6 py-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-gray-400">
-          <span className="text-gray-500 font-medium uppercase tracking-wider text-xs">Every service includes</span>
+        <div className="mt-10 rounded-2xl bg-white dark:bg-gray-950/60 border border-gray-200 dark:border-gray-700/50 px-6 py-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-gray-500 dark:text-gray-400">
+          <span className="text-gray-400 dark:text-gray-500 font-medium uppercase tracking-wider text-xs">Every service includes</span>
           {[
             "Claude API & SDK expertise",
             "Production-grade architecture",
@@ -164,7 +164,7 @@ export default function Services() {
         </div>
 
         {/* CTA banner */}
-        <div className="mt-6 rounded-2xl bg-cyan-950/30 border border-cyan-700/40 p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="mt-6 rounded-2xl bg-cyan-50 dark:bg-cyan-950/30 border border-cyan-200 dark:border-cyan-700/40 p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-start gap-4">
             <div className="w-10 h-10 rounded-xl bg-cyan-500 flex items-center justify-center shrink-0">
               <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5 text-white" stroke="currentColor" strokeWidth={2}>
@@ -172,13 +172,13 @@ export default function Services() {
               </svg>
             </div>
             <div>
-              <p className="text-white font-semibold mb-1">Not sure which engagement fits?</p>
-              <p className="text-gray-400 text-sm">We&apos;ll scope it in a 30-minute call — no commitment, no pitch deck.</p>
+              <p className="text-gray-900 dark:text-white font-semibold mb-1">Not sure which engagement fits?</p>
+              <p className="text-gray-500 dark:text-gray-400 text-sm">We&apos;ll scope it in a 30-minute call — no commitment, no pitch deck.</p>
             </div>
           </div>
           <a
             href="#contact"
-            className="shrink-0 bg-cyan-500 hover:bg-cyan-400 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-950/40 hover:-translate-y-0.5 whitespace-nowrap"
+            className="shrink-0 bg-cyan-500 hover:bg-cyan-400 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/30 hover:-translate-y-0.5 whitespace-nowrap"
           >
             Get a Free Consultation
           </a>

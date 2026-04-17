@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -10,7 +10,7 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("loading");
 
@@ -24,21 +24,21 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-gray-950 py-24 sm:py-32">
+    <section id="contact" className="bg-gray-50 dark:bg-gray-950 py-24 sm:py-32 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: copy */}
           <div>
-            <p className="text-cyan-400 text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="text-cyan-600 dark:text-cyan-400 text-sm font-semibold uppercase tracking-widest mb-3">
               Get In Touch
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
               Let&apos;s Build Your Next{" "}
-              <span className="bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-500 to-sky-500 dark:from-cyan-400 dark:to-sky-400 bg-clip-text text-transparent">
                 Claude AI Product
               </span>
             </h2>
-            <p className="text-gray-400 text-lg leading-relaxed mb-8">
+            <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-8">
               Whether you need a full product built, an existing app enhanced with Claude,
               or just a consultation — our team is ready. We respond within 24 hours.
             </p>
@@ -51,8 +51,8 @@ export default function Contact() {
                 "End-to-end delivery — design to deployment",
                 "Free initial consultation, no strings attached",
               ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-gray-400 text-sm">
-                  <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" stroke="currentColor" strokeWidth={2}>
+                <li key={item} className="flex items-start gap-3 text-gray-600 dark:text-gray-400 text-sm">
+                  <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5 text-cyan-500 dark:text-cyan-400 shrink-0 mt-0.5" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
                   {item}
@@ -91,9 +91,9 @@ export default function Contact() {
                   href: "https://wa.me/34634839752",
                 },
               ].map((item) => (
-                <div key={item.label} className="flex items-center gap-3 text-gray-400">
-                  <div className="text-cyan-400">{item.icon}</div>
-                  <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-cyan-400 transition-colors">
+                <div key={item.label} className="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                  <div className="text-cyan-500 dark:text-cyan-400">{item.icon}</div>
+                  <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
                     {item.label}
                   </a>
                 </div>
@@ -102,57 +102,57 @@ export default function Contact() {
           </div>
 
           {/* Right: form */}
-          <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8">
+          <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 sm:p-8">
             {status === "success" ? (
               <div className="text-center py-12">
-                <div className="w-16 h-16 rounded-full bg-cyan-950 border border-cyan-600 flex items-center justify-center mx-auto mb-4">
-                  <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8 text-cyan-400" stroke="currentColor" strokeWidth={2}>
+                <div className="w-16 h-16 rounded-full bg-cyan-50 dark:bg-cyan-950 border border-cyan-300 dark:border-cyan-600 flex items-center justify-center mx-auto mb-4">
+                  <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8 text-cyan-500 dark:text-cyan-400" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
                 </div>
-                <h3 className="text-white font-semibold text-xl mb-2">Message Sent!</h3>
-                <p className="text-gray-400 text-sm">
+                <h3 className="text-gray-900 dark:text-white font-semibold text-xl mb-2">Message Sent!</h3>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">
                   Thanks for reaching out. We&apos;ll be in touch within 24 hours.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
                   <input
                     type="text" id="name" name="name" required
                     value={formData.name} onChange={handleChange}
                     placeholder="Your full name"
-                    className="w-full bg-gray-950 border border-gray-700 text-white placeholder-gray-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/50 transition-colors"
+                    className="w-full bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/50 transition-colors"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
                   <input
                     type="email" id="email" name="email" required
                     value={formData.email} onChange={handleChange}
                     placeholder="you@example.com"
-                    className="w-full bg-gray-950 border border-gray-700 text-white placeholder-gray-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/50 transition-colors"
+                    className="w-full bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/50 transition-colors"
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
                   <textarea
                     id="message" name="message" required rows={5}
                     value={formData.message} onChange={handleChange}
                     placeholder="Tell us about your project — what you're building and how Claude fits in..."
-                    className="w-full bg-gray-950 border border-gray-700 text-white placeholder-gray-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/50 transition-colors resize-none"
+                    className="w-full bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/50 transition-colors resize-none"
                   />
                 </div>
 
                 {status === "error" && (
-                  <p className="text-red-400 text-sm">Something went wrong. Please try again or contact us directly.</p>
+                  <p className="text-red-500 dark:text-red-400 text-sm">Something went wrong. Please try again or contact us directly.</p>
                 )}
 
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="w-full bg-cyan-500 hover:bg-cyan-400 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-950/40 active:scale-[0.98]"
+                  className="w-full bg-cyan-500 hover:bg-cyan-400 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/30 active:scale-[0.98]"
                 >
                   {status === "loading" ? "Sending…" : "Send Message — We Reply in 24h"}
                 </button>
