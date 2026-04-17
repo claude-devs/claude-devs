@@ -1,3 +1,5 @@
+import CdLogo from "@/components/CdLogo";
+
 const footerLinks = [
   { label: "Home", href: "#hero" },
   { label: "Services", href: "#services" },
@@ -15,11 +17,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <a href="#hero" className="flex items-center gap-2.5 group">
-            <div className="w-7 h-7 rounded-md bg-cyan-500 flex items-center justify-center">
-              <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4 text-white" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
-              </svg>
-            </div>
+            <CdLogo size={30} gradId="cd-footer" />
             <span className="text-sm font-bold tracking-tight">
               <span className="text-white font-mono">Claude</span>
               <span className="font-mono bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent"> Devs</span>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import CdLogo from "@/components/CdLogo";
 
 const navLinks = [
   { label: "Home", href: "#hero" },
@@ -19,11 +20,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#hero" className="flex items-center gap-2.5 group">
-            <div className="w-8 h-8 rounded-lg bg-cyan-500 flex items-center justify-center">
-              <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5 text-white" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
-              </svg>
-            </div>
+            <CdLogo size={36} gradId="cd-nav" />
             <span className="text-lg font-bold tracking-tight">
               <span className="text-white font-mono">Claude</span>
               <span className="font-mono bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent"> Devs</span>
