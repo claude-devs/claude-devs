@@ -20,13 +20,13 @@ export default function Hero() {
       />
 
       {/* Dark mode overlay */}
-      <div className="absolute inset-0 dark:block hidden bg-gradient-to-r from-gray-950/97 via-gray-950/85 to-gray-950/50" />
+      <div className="absolute inset-0 dark:block hidden bg-gradient-to-r from-gray-950/97 via-gray-950/85 to-gray-950/50 pointer-events-none" />
       {/* Light mode overlay */}
-      <div className="absolute inset-0 dark:hidden block bg-gradient-to-r from-white/97 via-white/90 to-white/60" />
+      <div className="absolute inset-0 dark:hidden block bg-gradient-to-r from-white/97 via-white/90 to-white/60 pointer-events-none" />
 
       {/* Subtle grid */}
       <div
-        className="absolute inset-0 opacity-[0.025] dark:opacity-[0.04]"
+        className="absolute inset-0 opacity-[0.025] dark:opacity-[0.04] pointer-events-none"
         style={{
           backgroundImage:
             "linear-gradient(rgba(6,182,212,1) 1px, transparent 1px), linear-gradient(90deg, rgba(6,182,212,1) 1px, transparent 1px)",
@@ -37,7 +37,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-32 pb-24">
         <div className="max-w-2xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-cyan-950/50 dark:bg-cyan-950/60 border border-cyan-600/50 text-cyan-600 dark:text-cyan-300 text-xs font-medium px-4 py-2 rounded-full mb-8">
+          <div className="inline-flex items-center gap-2 bg-cyan-50 dark:bg-cyan-950/60 border border-cyan-200 dark:border-cyan-600/50 text-cyan-600 dark:text-cyan-300 text-xs font-medium px-4 py-2 rounded-full mb-8">
             <span className="w-2 h-2 bg-cyan-500 dark:bg-cyan-400 rounded-full animate-pulse" />
             Official Anthropic Claude AI Development Partner
           </div>
@@ -117,7 +117,7 @@ export default function Hero() {
       <button
         onClick={scrollToServices}
         aria-label="Scroll to services"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400 dark:text-gray-600 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors duration-200 group cursor-pointer"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-gray-400 dark:text-gray-600 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors duration-200 group cursor-pointer"
       >
         <span className="text-xs tracking-widest uppercase font-medium">Scroll</span>
         <div className="w-6 h-10 rounded-full border-2 border-current flex items-start justify-center pt-1.5 group-hover:border-current transition-colors">
