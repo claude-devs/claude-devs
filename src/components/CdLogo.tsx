@@ -9,20 +9,20 @@ export default function CdLogo({ size = 36, gradId = "cd-g" }: { size?: number; 
       </defs>
       {/* Background */}
       <rect width="36" height="36" rx="9" fill={`url(#${gradId})`} />
-      {/* C — open arc curving around the left */}
+      {/* C — more square proportions, opens right */}
       <path
-        d="M15,9 C4,9 4,27 15,27"
+        d="M14,12 C6,12 6,24 14,24"
         stroke="white"
-        strokeWidth="2.6"
+        strokeWidth="2.4"
         strokeLinecap="round"
         fill="none"
       />
-      {/* D — vertical bar + right curve */}
-      <line x1="19" y1="9" x2="19" y2="27" stroke="white" strokeWidth="2.6" strokeLinecap="round" />
+      {/* D — vertical bar + right curve, wider gap from C */}
+      <line x1="20" y1="12" x2="20" y2="24" stroke="white" strokeWidth="2.4" strokeLinecap="round" />
       <path
-        d="M19,9 C31,9 31,27 19,27"
+        d="M20,12 C29,12 29,24 20,24"
         stroke="white"
-        strokeWidth="2.6"
+        strokeWidth="2.4"
         strokeLinecap="round"
         fill="none"
       />
