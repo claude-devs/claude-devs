@@ -38,19 +38,18 @@ export default function Hero() {
         <div className="max-w-2xl">
           {/* Headline */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 leading-tight">
-            We Build Smarter{" "}
+            We ship real products{" "}
+            <br className="hidden sm:block" />
             <span className="bg-gradient-to-r from-cyan-500 to-sky-500 dark:from-cyan-400 dark:to-sky-400 bg-clip-text text-transparent">
-              with Claude
+              with Claude Code
             </span>
-            <br />
-            than Anyone Else
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-            Claude Devs is a software studio that lives and breathes Anthropic&apos;s Claude AI.
-            We don&apos;t just use it as a tool — we build products, automations, and integrations
-            on top of it every single day.
+            Claude Devs is an independent engineering team. We build MVPs, web apps and
+            platforms with Claude Code and take them to production, for technical teams
+            that have already chosen Claude.
           </p>
 
           {/* Claude callout */}
@@ -60,23 +59,23 @@ export default function Hero() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
               </svg>
               <span>
-                <span className="text-cyan-600 dark:text-cyan-300 font-semibold">Claude API</span>
-                {" · "}
-                <span className="text-cyan-600 dark:text-cyan-300 font-semibold">Claude Code</span>
-                {" · "}
-                <span className="text-cyan-600 dark:text-cyan-300 font-semibold">Anthropic SDK</span>
+                <span className="text-cyan-600 dark:text-cyan-300 font-semibold">Fixed scope</span>
+                {" after a paid discovery"}
               </span>
             </div>
-            <span className="hidden sm:block text-gray-300 dark:text-gray-600">—</span>
-            <span>Deep expertise, real production experience</span>
+            <span className="hidden sm:block text-gray-300 dark:text-gray-600">|</span>
+            <span>
+              <span className="text-cyan-600 dark:text-cyan-300 font-semibold">Dedicated team</span>
+              {" on monthly capacity"}
+            </span>
           </div>
 
           {/* Stats */}
-          <div className="flex items-center gap-8 mb-10 border-t border-gray-200 dark:border-gray-800 pt-8">
+          <div className="flex items-start gap-6 sm:gap-8 mb-10 border-t border-gray-200 dark:border-gray-800 pt-8">
             {[
-              { value: "50+", label: "AI Projects Shipped" },
-              { value: "98%", label: "Client Satisfaction" },
-              { value: "3x", label: "Faster with Claude" },
+              { value: "2018", label: "Shipping since" },
+              { value: "20", label: "Engineers" },
+              { value: "100k", label: "Monthly users per marketplace" },
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="text-2xl sm:text-3xl font-bold text-cyan-500 dark:text-cyan-400">
@@ -95,13 +94,13 @@ export default function Hero() {
               href="#contact"
               className="w-full sm:w-auto bg-cyan-500 hover:bg-cyan-400 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:-translate-y-0.5 text-center"
             >
-              Start Your AI Project
+              Start a project
             </a>
             <a
-              href="#portfolio"
+              href="#process"
               className="w-full sm:w-auto bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-semibold px-8 py-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-500 transition-all duration-200 hover:-translate-y-0.5 text-center"
             >
-              See What We&apos;ve Built
+              See how we work
             </a>
           </div>
         </div>

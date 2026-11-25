@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Claude-devs | AI-Powered Software Development",
+  title: "Claude Devs: Product Engineering with Claude Code",
   description:
-    "Claude-devs delivers cutting-edge software development services powered by Anthropic Claude AI tools. Web, mobile, AI integrations, APIs, cloud solutions, and UI/UX design.",
+    "Claude Devs is an independent engineering team that builds and ships MVPs, web apps and platforms with Claude Code. Fixed scope after discovery, or a dedicated team on monthly capacity.",
 };
 
 export default function RootLayout({

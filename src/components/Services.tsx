@@ -5,23 +5,12 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
       </svg>
     ),
-    title: "AI Product Development",
-    headline: "Build Your AI Product from Zero to Production",
+    title: "Product Development",
+    headline: "MVPs, web apps and platforms, built with Claude Code",
     description:
-      "We design and ship complete AI-powered products on the Anthropic stack. Intelligent assistants, document processing platforms, decision-support tools, and AI-native SaaS — architected for scale with built-in evaluation, observability, and human-in-the-loop workflows.",
-    badge: "Flagship",
+      "We start with a short paid discovery and come back with a scope, an architecture and a quote we commit to. Then we build, test and ship. Agent features and MCP integrations are part of the build when the product needs them.",
+    badge: "Fixed scope",
     badgeStyle: "flagship",
-  },
-  {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.39 48.39 0 01-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 01-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 00-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 01-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 00.657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 005.427-.63 48.05 48.05 0 00.582-4.717.532.532 0 00-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.959.401v0a.656.656 0 00.658-.663 48.422 48.422 0 00-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 01-.61-.58v0z" />
-      </svg>
-    ),
-    title: "Claude Integration",
-    headline: "Add Claude Intelligence to What You Already Have",
-    description:
-      "Upgrade your existing application with Claude-powered features — smart search, auto-categorization, content generation, and intelligent workflows. We audit your system, build a working prototype in 2 weeks, and deploy to production with zero disruption to your users.",
   },
   {
     icon: (
@@ -29,13 +18,24 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
       </svg>
     ),
-    title: "AI Team Augmentation & Rescue",
-    headline: "Your Dev Team Is Stuck. We Unstick Them.",
+    title: "Dedicated Team",
+    headline: "A senior team on monthly capacity",
     description:
-      "Three modes: Embed our Claude-trained engineers to boost output 2–3×. Train your devs on Claude Code and Anthropic SDK in 2–4 weeks. Or Accelerate — we take over delivery entirely with no context lost and faster results from day one.",
-    badge: "Most Requested",
+      "A named team that works inside your repo and your process: your backlog, your reviews, your releases. You agree the team and a minimum term up front and pay for monthly capacity, not for hours on a timesheet.",
+    badge: "Monthly capacity",
     badgeStyle: "hot",
     featured: true,
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
+      </svg>
+    ),
+    title: "AI-Code Rescue",
+    headline: "Make an AI-built app safe to run in production",
+    description:
+      "For products with real users that were built fast with Claude Code, Cursor or a no-code builder. We audit the codebase, fix what blocks production (security, data, tests, deploys) and can stay on for maintenance.",
   },
   {
     icon: (
@@ -43,32 +43,10 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
       </svg>
     ),
-    title: "GPT-to-Claude Migration",
-    headline: "Switch from OpenAI to Claude — Zero Downtime, Better Results",
+    title: "Claude Code Rollout",
+    headline: "Set up Claude Code across your engineering team",
     description:
-      "Full audit, prompt re-engineering, eval pipeline rebuild, and A/B quality testing. Most migrations complete in 2–4 weeks with measurable output quality improvements and cost reduction up to 40%.",
-  },
-  {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-      </svg>
-    ),
-    title: "AI Workflow Automation",
-    headline: "Replace Manual Processes with Claude-Powered Automation",
-    description:
-      "Document processing, email triage, data extraction, report generation, compliance checking — every workflow custom-built for your business logic. Clients typically save 20–40 hours per week per workflow.",
-  },
-  {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
-      </svg>
-    ),
-    title: "AI Agents Development",
-    headline: "Autonomous AI Agents That Actually Work in Production",
-    description:
-      "Single-agent and multi-agent systems with Claude: customer support agents, sales copilots, research assistants, coding agents. Full stack: tool use, persistent memory, planning loops, guardrails, and human escalation. Production systems, not demos.",
+      "We configure Claude Code on your own repositories: project instructions, permissions, hooks, MCP connections and review rules. Moving an existing integration from OpenAI to Claude is handled as part of the same work.",
   },
 ];
 
@@ -79,21 +57,21 @@ export default function Services() {
         {/* Section header */}
         <div className="text-center mb-16">
           <p className="text-cyan-600 dark:text-cyan-400 text-sm font-semibold uppercase tracking-widest mb-3">
-            What We Solve
+            What We Do
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            How We Help You{" "}
+            Four ways to{" "}
             <span className="bg-gradient-to-r from-cyan-500 to-sky-500 dark:from-cyan-400 dark:to-sky-400 bg-clip-text text-transparent">
-              Win with Claude AI
+              work with us
             </span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
-            We don&apos;t list technologies — we solve business problems. Every engagement is built on deep Anthropic expertise and production-tested AI architecture.
+            We do not sell hours with an AI label. You get working software, a scope you agreed to and a process you can inspect.
           </p>
         </div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service) => (
             <div
               key={service.title}
@@ -149,12 +127,12 @@ export default function Services() {
 
         {/* Included-in-everything strip */}
         <div className="mt-10 rounded-2xl bg-white dark:bg-gray-950/60 border border-gray-200 dark:border-gray-700/50 px-6 py-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-gray-500 dark:text-gray-400">
-          <span className="text-gray-400 dark:text-gray-500 font-medium uppercase tracking-wider text-xs">Every service includes</span>
+          <span className="text-gray-400 dark:text-gray-500 font-medium uppercase tracking-wider text-xs">Every engagement includes</span>
           {[
-            "Claude API & SDK expertise",
-            "Production-grade architecture",
-            "Eval & testing pipeline",
-            "Post-launch support",
+            "Engineers review every change",
+            "Tests and CI before merge",
+            "Your repo and your accounts",
+            "Handover with agent configuration",
           ].map((item) => (
             <span key={item} className="flex items-center gap-1.5">
               <span className="w-1 h-1 rounded-full bg-cyan-500/70 shrink-0" />
@@ -172,15 +150,15 @@ export default function Services() {
               </svg>
             </div>
             <div>
-              <p className="text-gray-900 dark:text-white font-semibold mb-1">Not sure which engagement fits?</p>
-              <p className="text-gray-500 dark:text-gray-400 text-sm">We&apos;ll scope it in a 30-minute call — no commitment, no pitch deck.</p>
+              <p className="text-gray-900 dark:text-white font-semibold mb-1">Not sure which one fits?</p>
+              <p className="text-gray-500 dark:text-gray-400 text-sm">We will scope it in a 30-minute call. No commitment, no pitch deck.</p>
             </div>
           </div>
           <a
             href="#contact"
             className="shrink-0 bg-cyan-500 hover:bg-cyan-400 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/30 hover:-translate-y-0.5 whitespace-nowrap"
           >
-            Get a Free Consultation
+            Book a 30-minute call
           </a>
         </div>
       </div>

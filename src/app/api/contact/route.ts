@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     from: "Claude Devs <noreply@claude-devs.com>",
     to: RECIPIENTS,
     replyTo: email,
-    subject: `New message from ${name} — Claude Devs`,
+    subject: `New message from ${name} (Claude Devs)`,
     html: `
       <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px">
         <h2 style="color:#7c3aed;margin-bottom:4px">New Contact Form Submission</h2>

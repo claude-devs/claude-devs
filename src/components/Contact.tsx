@@ -33,23 +33,23 @@ export default function Contact() {
               Get In Touch
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-              Let&apos;s Build Your Next{" "}
+              Tell us what{" "}
               <span className="bg-gradient-to-r from-cyan-500 to-sky-500 dark:from-cyan-400 dark:to-sky-400 bg-clip-text text-transparent">
-                Claude AI Product
+                you are building
               </span>
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-8">
-              Whether you need a full product built, an existing app enhanced with Claude,
-              or just a consultation — our team is ready. We respond within 24 hours.
+              A product to build, a team to extend, or an AI-built app that needs to be
+              made production-ready. We reply within 24 hours.
             </p>
 
             {/* Why us list */}
             <ul className="space-y-3 mb-10">
               {[
-                "Deep Anthropic SDK & Claude API expertise",
-                "Production-proven Claude integrations",
-                "End-to-end delivery — design to deployment",
-                "Free initial consultation, no strings attached",
+                "A free 30-minute scoping call with an engineer",
+                "Fixed scope and a quote after a paid discovery",
+                "Or a dedicated team on monthly capacity",
+                "You keep the code, the docs and the agent configuration",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-gray-600 dark:text-gray-400 text-sm">
                   <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5 text-cyan-500 dark:text-cyan-400 shrink-0 mt-0.5" stroke="currentColor" strokeWidth={2}>
@@ -140,7 +140,7 @@ export default function Contact() {
                   <textarea
                     id="message" name="message" required rows={5}
                     value={formData.message} onChange={handleChange}
-                    placeholder="Tell us about your project — what you're building and how Claude fits in..."
+                    placeholder="What are you building, and where are you with it today?"
                     className="w-full bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/50 transition-colors resize-none"
                   />
                 </div>
@@ -154,7 +154,7 @@ export default function Contact() {
                   disabled={status === "loading"}
                   className="w-full bg-cyan-500 hover:bg-cyan-400 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer text-white font-semibold py-3 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/30 active:scale-[0.98]"
                 >
-                  {status === "loading" ? "Sending…" : "Send Message — We Reply in 24h"}
+                  {status === "loading" ? "Sending…" : "Send message"}
                 </button>
               </form>
             )}

@@ -3,8 +3,7 @@ import CdLogo from "@/components/CdLogo";
 const footerLinks = [
   { label: "Home", href: "#hero" },
   { label: "Services", href: "#services" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Testimonials", href: "#testimonials" },
+  { label: "How we work", href: "#process" },
   { label: "Team", href: "#team" },
   { label: "Contact", href: "#contact" },
 ];
@@ -39,6 +38,12 @@ export default function Footer() {
             &copy; {year} Claude Devs. All rights reserved.
           </p>
         </div>
+
+        {/* Independence notice */}
+        <p className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-800 text-gray-500 dark:text-gray-500 text-xs leading-relaxed text-center max-w-3xl mx-auto">
+          Claude Devs is an independent software engineering agency. We are not affiliated with,
+          endorsed by, or sponsored by Anthropic. Claude and Claude Code are trademarks of Anthropic, PBC.
+        </p>
       </div>
     </footer>
   );

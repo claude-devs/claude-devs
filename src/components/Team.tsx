@@ -1,10 +1,9 @@
 const founderAchievements = [
   "10+ years working with enterprise & startup technologies",
-  "Founded and scaled a software services company from 0 to production",
-  "Delivered 50+ digital products across web, mobile, and AI",
-  "Deep expertise in product architecture and go-to-market strategy",
-  "Knows how to build fast, validate quickly, and ship what matters",
-  "Trusted by clients across Europe and beyond",
+  "Founded a software services company in 2018 and has run it since",
+  "Led full-stack engineering for a US product company for five years",
+  "Puts the right team on each request and stays accountable for delivery",
+  "Clients in the US, the UK, Australia and the EU",
 ];
 
 const teamStrengths = [
@@ -15,7 +14,7 @@ const teamStrengths = [
       </svg>
     ),
     title: "Senior Engineers",
-    body: "5+ years of hands-on experience each. Not juniors learning on your budget — engineers who've seen it all and know how to solve it.",
+    body: "The engineers who scope your project are the ones who build it. No juniors learning on your budget.",
   },
   {
     icon: (
@@ -23,8 +22,8 @@ const teamStrengths = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
       </svg>
     ),
-    title: "Claude-Native",
-    body: "We don't just prompt Claude — we architect around it. Our team has deep, native knowledge of Claude tools, the Anthropic SDK, and AI-assisted workflows.",
+    title: "Claude Code in the Workflow",
+    body: "Project instructions, hooks, MCP connections and review rules are set up per repository, so the agent works to the same standard as the team.",
   },
   {
     icon: (
@@ -32,8 +31,8 @@ const teamStrengths = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    title: "Test-First Delivery",
-    body: "We test before we ship. Every feature, every edge case. No 'it works on my machine' — flawless results in production.",
+    title: "Tested Before It Ships",
+    body: "Automated tests and CI gate every merge, whoever wrote the code. Nothing reaches production on the strength of a demo.",
   },
   {
     icon: (
@@ -41,8 +40,8 @@ const teamStrengths = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
       </svg>
     ),
-    title: "Built for Speed",
-    body: "AI-native development means we move faster than traditional teams. What takes months elsewhere takes us weeks — without cutting corners.",
+    title: "A Scope You Can Hold Us To",
+    body: "After discovery you get a written scope and a quote. We do not promise a speed multiplier. We promise what will be delivered and when.",
   },
 ];
 
@@ -62,8 +61,8 @@ export default function Team() {
             </span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
-            A tight-knit team of senior engineers led by a founder who has built,
-            shipped, and scaled products for a decade.
+            An engineering team that has shipped products together since 2018,
+            led by a founder with more than ten years in digital transformation.
           </p>
         </div>
 
@@ -83,10 +82,10 @@ export default function Team() {
               <div>
                 <h3 className="text-gray-900 dark:text-white text-xl font-bold mb-0.5">Oleksii Hashkov</h3>
                 <p className="text-cyan-600 dark:text-cyan-400 text-sm font-medium">Founder & CEO</p>
-                <p className="text-gray-500 dark:text-gray-500 text-sm mt-1">Engineer · Builder · Strategist</p>
+                <p className="text-gray-500 dark:text-gray-500 text-sm mt-1">Engineer · Tech lead · Founder</p>
               </div>
               <div className="flex flex-wrap gap-2">
-                {["10+ yrs exp", "Product", "Architecture", "Founder"].map((tag) => (
+                {["10+ yrs exp", "Delivery", "Architecture", "Founder"].map((tag) => (
                   <span
                     key={tag}
                     className="text-xs font-medium bg-cyan-50 dark:bg-cyan-950/60 border border-cyan-200 dark:border-cyan-700/40 text-cyan-600 dark:text-cyan-300 px-3 py-1 rounded-full"
@@ -100,10 +99,9 @@ export default function Team() {
             {/* Right: bio + achievements */}
             <div className="lg:col-span-2">
               <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed mb-6">
-                Oleksii is the kind of founder who writes code in the morning and closes
-                deals in the afternoon. With over a decade of experience across engineering,
-                product management, and business development, he built Claude Devs to bridge
-                the gap between cutting-edge AI capabilities and real-world software delivery.
+                Oleksii has spent more than ten years in digital transformation, as an
+                engineer, a tech lead and a founder. At Claude Devs he runs delivery: he
+                assembles the team for each request and answers for the result.
               </p>
               <ul className="space-y-2.5">
                 {founderAchievements.map((item) => (
