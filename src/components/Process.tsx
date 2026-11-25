@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const steps = [
   {
     title: "Discovery",
@@ -19,7 +21,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="bg-white dark:bg-gray-950 py-24 sm:py-32 transition-colors duration-300">
+    <section id="process" className="bg-gray-50 dark:bg-gray-900 py-24 sm:py-32 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
@@ -42,7 +44,7 @@ export default function Process() {
           {steps.map((step, index) => (
             <li
               key={step.title}
-              className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 hover:border-cyan-300 dark:hover:border-cyan-700/50 transition-colors duration-300"
+              className="bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 hover:border-cyan-300 dark:hover:border-cyan-700/50 transition-colors duration-300"
             >
               <div className="font-mono text-sm font-semibold text-cyan-600 dark:text-cyan-400 mb-4">
                 {String(index + 1).padStart(2, "0")}
@@ -52,6 +54,18 @@ export default function Process() {
             </li>
           ))}
         </ol>
+
+        <div className="text-center mt-12">
+          <Link
+            href="/process"
+            className="inline-flex items-center gap-2 text-cyan-600 dark:text-cyan-400 hover:text-cyan-500 dark:hover:text-cyan-300 font-semibold transition-colors"
+          >
+            Read the full process
+            <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </Link>
+        </div>
       </div>
     </section>
   );

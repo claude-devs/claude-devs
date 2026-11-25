@@ -1,15 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import CdLogo from "@/components/CdLogo";
 import { useTheme } from "@/components/ThemeProvider";
 
 const navLinks = [
-  { label: "Home", href: "#hero" },
-  { label: "Services", href: "#services" },
-  { label: "How we work", href: "#process" },
-  { label: "Team", href: "#team" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#hero" },
+  { label: "Services", href: "/#services" },
+  { label: "Work", href: "/#work" },
+  { label: "Process", href: "/process" },
+  { label: "Team", href: "/#team" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -21,24 +23,24 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#hero" className="flex items-center gap-2.5 group">
+          <Link href="/" className="flex items-center gap-2.5 group">
             <CdLogo size={36} gradId="cd-nav" />
             <span className="text-lg font-bold tracking-tight">
               <span className="text-gray-900 dark:text-white font-mono">Claude</span>
               <span className="font-mono bg-gradient-to-r from-cyan-500 to-sky-500 dark:from-cyan-400 dark:to-sky-400 bg-clip-text text-transparent"> Devs</span>
             </span>
-          </a>
+          </Link>
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="text-gray-500 dark:text-gray-400 hover:text-cyan-600 dark:hover:text-cyan-400 text-sm font-medium transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
 
             {/* Theme toggle */}
@@ -58,12 +60,12 @@ export default function Navbar() {
               )}
             </button>
 
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               className="bg-cyan-500 hover:bg-cyan-400 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors shadow-lg shadow-cyan-500/20"
             >
               Get in Touch
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile right: theme toggle + hamburger */}
@@ -107,22 +109,22 @@ export default function Navbar() {
         <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 px-4 pb-4 pt-2">
           <nav className="flex flex-col gap-3">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
                 className="text-gray-600 dark:text-gray-400 hover:text-cyan-600 dark:hover:text-cyan-400 text-sm font-medium py-2 transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               onClick={() => setMenuOpen(false)}
               className="bg-cyan-500 hover:bg-cyan-400 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors text-center mt-1"
             >
               Get in Touch
-            </a>
+            </Link>
           </nav>
         </div>
       )}

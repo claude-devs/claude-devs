@@ -1,11 +1,13 @@
 import CdLogo from "@/components/CdLogo";
+import Link from "next/link";
 
 const footerLinks = [
-  { label: "Home", href: "#hero" },
-  { label: "Services", href: "#services" },
-  { label: "How we work", href: "#process" },
-  { label: "Team", href: "#team" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#hero" },
+  { label: "Services", href: "/#services" },
+  { label: "Work", href: "/#work" },
+  { label: "Process", href: "/process" },
+  { label: "Team", href: "/#team" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Footer() {
@@ -16,20 +18,20 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
-          <a href="#hero" className="flex items-center gap-2.5 group">
+          <Link href="/" className="flex items-center gap-2.5 group">
             <CdLogo size={30} gradId="cd-footer" />
             <span className="text-sm font-bold tracking-tight">
               <span className="text-gray-900 dark:text-white font-mono">Claude</span>
               <span className="font-mono bg-gradient-to-r from-cyan-500 to-sky-500 dark:from-cyan-400 dark:to-sky-400 bg-clip-text text-transparent"> Devs</span>
             </span>
-          </a>
+          </Link>
 
           {/* Nav links */}
           <nav className="flex flex-wrap justify-center gap-6">
             {footerLinks.map((link) => (
-              <a key={link.href} href={link.href} className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 text-sm transition-colors">
+              <Link key={link.href} href={link.href} className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 text-sm transition-colors">
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
