@@ -31,7 +31,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
       <head>
-        <GoogleTagManager gtmId="GTM-NK7JH25C" />
+        <GoogleTagManager gtmId="GTM-PTJPM2MQ" />
         {/* Prevent flash of wrong theme */}
         <script
           dangerouslySetInnerHTML={{
