@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { GoogleTagManager } from "@next/third-parties/google";
+import { pageMetadata, site } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,9 +16,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Claude Devs: Product Engineering with Claude Code",
-  description:
-    "Claude Devs is an independent engineering team that builds and ships MVPs, web apps and platforms with Claude Code. Fixed scope after discovery, or a dedicated team on monthly capacity.",
+  metadataBase: new URL(site.url),
+  ...pageMetadata({
+    title: "Claude Devs: Product Engineering with Claude Code",
+    description: site.description,
+    path: "/",
+  }),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
+  },
 };
 
 export default function RootLayout({

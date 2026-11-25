@@ -3,12 +3,14 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "How We Build with Claude Code | Claude Devs",
   description:
     "What the agent does, what an engineer checks, which gates every change passes before it merges, and what you receive at handover.",
-};
+  path: "/process",
+});
 
 const split = [
   {
