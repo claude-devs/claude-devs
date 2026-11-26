@@ -27,6 +27,8 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
   },
+  // Search Console ownership for the https://claude-devs.com property. Keep it: removing the tag drops verification.
+  verification: { google: "C12e4rUW-YimB7RZI1q5wBJ-qSL7ZsUfxhz8BUhBvPQ" },
 };
 
 export default function RootLayout({
