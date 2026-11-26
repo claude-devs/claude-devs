@@ -15,6 +15,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// EEA member states, plus the UK and Switzerland.
+const CONSENT_REGIONS = [
+  "AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT",
+  "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "LI", "NO",
+  "GB", "CH",
+];
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   ...pageMetadata({
@@ -42,6 +49,17 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
       <head>
+        {/*
+          Consent Mode defaults, set before Tag Manager loads. Visitors from the EEA,
+          the UK and Switzerland start with analytics and ad storage denied: Google
+          Analytics then sends cookieless pings and sets no cookies. There is no
+          consent banner yet; when one is added it must call gtag('consent', 'update', ...).
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',region:${JSON.stringify(CONSENT_REGIONS)}});`,
+          }}
+        />
         <GoogleTagManager gtmId="GTM-PTJPM2MQ" />
         {/* Prevent flash of wrong theme */}
         <script
