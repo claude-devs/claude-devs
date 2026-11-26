@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { GoogleTagManager } from "@next/third-parties/google";
+import Analytics from "@/components/Analytics";
+import CookieConsent from "@/components/CookieConsent";
+import { CONSENT_REGIONS } from "@/lib/consent";
 import { pageMetadata, site } from "@/lib/site";
 
 const geistSans = Geist({
@@ -14,13 +16,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-// EEA member states, plus the UK and Switzerland.
-const CONSENT_REGIONS = [
-  "AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT",
-  "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "LI", "NO",
-  "GB", "CH",
-];
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -50,17 +45,16 @@ export default function RootLayout({
     >
       <head>
         {/*
-          Consent Mode defaults, set before Tag Manager loads. Visitors from the EEA,
-          the UK and Switzerland start with analytics and ad storage denied: Google
-          Analytics then sends cookieless pings and sets no cookies. There is no
-          consent banner yet; when one is added it must call gtag('consent', 'update', ...).
+          Consent Mode signals, set before anything else can run. Visitors from the
+          EEA, the UK and Switzerland start with analytics and ad storage denied; a
+          stored "granted" answer switches analytics back on. Tag Manager itself is
+          rendered by <Analytics />, and only once the consent state is granted.
         */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',region:${JSON.stringify(CONSENT_REGIONS)}});`,
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',region:${JSON.stringify(CONSENT_REGIONS)}});if(/(?:^|; )cd_consent=granted/.test(document.cookie)){gtag('consent','update',{analytics_storage:'granted'});}`,
           }}
         />
-        <GoogleTagManager gtmId="GTM-PTJPM2MQ" />
         {/* Prevent flash of wrong theme */}
         <script
           dangerouslySetInnerHTML={{
@@ -70,6 +64,8 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-white transition-colors duration-300">
         <ThemeProvider>{children}</ThemeProvider>
+        <CookieConsent />
+        <Analytics />
       </body>
     </html>
   );

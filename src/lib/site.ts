@@ -14,7 +14,7 @@ export const site = {
     "Claude Devs is an independent engineering team that builds and ships MVPs, web apps and platforms with Claude Code. Fixed scope after discovery, or a dedicated team on monthly capacity.",
   parent: { name: "Smart-UI", url: "https://smart-ui.pro" },
   /** Bump by hand when the copy of a page changes. Used as lastModified in the sitemap. */
-  contentUpdated: "2026-11-25",
+  contentUpdated: "2026-11-26",
 } as const;
 
 export const absoluteUrl = (path = "/") =>
